@@ -1,2 +1,0 @@
-# codelearning
-Uczymy się kodowania!
