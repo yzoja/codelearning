@@ -15,15 +15,7 @@ a {
 	color: purple;
 }
 
-.current a {
-	font-weight: bold;
-}
-
-.row {
-	max-width: 1200px;
-	width: 90%;
-	margin: 0 auto;
-}
+/* header */
 
 header {
 	background: #fff;
@@ -40,6 +32,19 @@ header li {
 	margin-left: 1em;
 }
 
+.current a {
+	font-weight: bold;
+}
+
+
+/* main */
+
+.row {
+	max-width: 1200px;
+	width: 90%;
+	margin: 0 auto;
+}
+
 main {
 	padding: 2rem 0;
 }
@@ -47,6 +52,8 @@ main {
 p {
 	margin-top: 1em;
 }
+
+/* footer */
 
 footer {
 	padding: 20px;
