@@ -100,8 +100,21 @@ aside {
 	border-left: 1px solid #ddd;
 }
 
+.current {
+	font-weight: bold;
+}
+
 aside li {
-	list-style-position: inside;
+	margin-left: 1.2rem;
+}
+
+aside li li {
+	margin-left: 2rem;
+	margin-top: 10px;
+}
+
+aside li ~ li {
+	margin-top: 10px;
 }
 
 footer {
