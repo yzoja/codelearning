@@ -63,6 +63,22 @@
 </code></pre>
 <p>Pilnujcie wcięć - tu się coś w podglądzie mocno pokićkało.</p>
 <p>Z <code>main</code> wywalcie klasę <code>.row</code> - nie będzie nam potrzebna.</p>
+<p>Zaczynamy coś nowego, dobrze więc oddzielić sobie CSS, żebyśmy sami pamiętali później, że to, co będziemy teraz robić, jest nadal w tym samym pliku, ale ma niewiele wspólnego z tym, co robiliśmy wcześniej.</p>
+<p>W tym celu dobrze jest sobie zrobić komentarz w CSS-ie.</p>
+<pre><code class='language-css' lang='css'>/*
+One Page Layout
+*/
+</code></pre>
+<p>I lecimy, okej?</p>
+<p>Na starcie <code>header</code> działa i wygląda normalnie, prawda? Tekst mamy znów rozwalony na całą szerokość, obrazki wyrównane tak, jak określiliśmy w CSS-ie, część sekcji nam wskakuje jedna obok drugiej, jeśli daliśmy w nich mało sekcji. Brzydko!</p>
+<pre><code class='language-css' lang='css'>#one-page main {
+    display: block;
+}
+</code></pre>
+<p>W ten sposób nadpisujemy nasz wcześniejszy <code>display: flex</code>. Selektor zdefiniowany w ten sposób ma pierwszeństwo nad zwykłym <code>main</code>. Jeśli będziemy dodawać kolejne wyższe elementy z drzewka HTML, to będą one miały jeszcze wyższy priorytet, nie ważne, czy znajdą się w CSS-ie wyżej, czy niżej.</p>
+<p>Wyzerujcie też <code>padding</code>, okej? (<code>padding: 0</code>)</p>
+<h3>Ćwiczenie</h3>
+<p>Do klas o odpowiednich nazwach (<code>.white</code>, <code>.blue</code>) dodajcie sobie tła o odpowiednich kolorach i dopasujcie kolor fontów.</p>
 
 
 

@@ -81,3 +81,12 @@ footer {
 	padding: 20px;
 	background: #555;
 }
+
+/*
+One Page Layout
+*/
+
+#one-page main {
+	display: block;
+	padding: 0;
+}
