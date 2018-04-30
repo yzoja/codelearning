@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<title>Lekcja 2</title>
+<meta name="description" content="Spróbujmy dziś bardziej interaktywnej formy">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Lekcja 2"/>
+<meta property="og:description" content="Bardziej interaktywna wersja nauki HTML/CSS"/>
+<meta property="og:image" content="share.jpg"/>
+<link rel="shortcut icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Kurs HTML/CSS/JS pod WordPress</h1>
+		<nav>
+			<ul>
+				<li class="current"><a href="index.html">Lekcja 2</a></li>
+				<li><a href="about.html">O co chodzi?</a></li>
+				<li><a target="_blank" href="https://discordapp.com/channels/432575469645201408/">Discord</a></li>
+				<li><a target="_blank" href="https://github.com/yzoja/codelearning">Github</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article id="content">
+			<h2>Układanie elementów obok siebie</h2>
+			<h3>Sposób 2: float</h3>
+<p>To stara metoda, taka, która pozwoliła robić sensowne kolumny w czasach, gdy większosć stron używała tabel. I o ile z tabel do innych celów już zrezygnowaliśmy, o tyle <code>float</code> wciąż ma sporo sensownych zastosowań. Ale i pułapek, o których trzeba pamiętać.</p>
+<p>Do tego ćwiczenia potrzebujemy zdjęcie, a jeśli nie chce Wam się szukać czegoś konkretnego, to popatrzcie sobie tutaj <a href='https://picsum.photos/' target='_blank' >https://picsum.photos/</a>.</p>
+<p><strong>Jak wklejać obrazki?</strong> <code>&lt;img src=&quot;adres obrazka&quot; alt=&quot;tekst alternatywny&quot;&gt;</code> Adres zacznijcie od <code>http</code>, nigdy od <code>www</code> - pamiętacie rozmowę o adresach relatywnych i absolutnych? Dlatego też <strong>zawsze</strong> jak dajecie gdzieś linka absolutnego, to dorzucajcie protokół, czyli <code>http://</code> lub <code>https://</code> - w innym przypadku podany przez Was adres będzie doklejony do adresu aktualnej strony. A tego przecież nie chcemy, nie?</p>
+<p>Dodajmy sobie do obrazka jeszcze klasę. Możemy od razu przejść do tych, których używa WordPress? <code>alignleft</code> dla obrazka wyrównanego do lewej, <code>alignright</code> do prawej, <code>aligncenter</code> to obrazka, który ma się pojawić na środku pola z tekstem.</p>
+<p><code>alignleft</code> i <code>alignright</code> to warianty, gdzie nasz tekst będzie opływał obrazek, oczywiście na planie prostokąta, jeśli dodamy mu sensowny CSS, zawierający właśnie <code>float</code>.</p>
+<pre><code class='language-css' lang='css'>.alignleft {
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+</code></pre>
+<p>Analogicznie dodajcie sobie dla <code>alignright</code>, pilnując, by <code>float</code> ustawiony był na drugą stronę, podobnie ten margines, który odsunie zdjęcie od tekstu.</p>
+<p>Gdzieś więc w Waszym tekście, najlepiej w dwóch różnych akapitach (na ich początku, zaraz po <code>&lt;p&gt;</code>) dodajcie więc: <code>&lt;img src=&quot;https://picsum.photos/200/300/?random&quot; alt=&quot;obrazek&quot; class=&quot;alignleft&quot;&gt;</code> i podobnie z drugą klasą, w innym akapicie.</p>
+<p>I na początek to zacznie wyglądać.</p>
+<blockquote><p>Przy pracy z obrazkami, warto już na wstępie CSS-a dodać sobie regułę, która sprawi, że zdjęcia będą się skalować z zachowaniem proporcji i nie rozjadą nam się bardziej, niż na to element-rodzic pozwala.</p>
+</blockquote>
+<pre><code class='language-css' lang='css'>img {
+    max-width: 100%;
+    height: auto;
+}
+</code></pre>
+<p>Floaty mają jeden zasadniczy problem. Jeśli Wasz akapit będzie za krótki, to zobaczycie, że kolejny też się wcina, żeby zrobić mu miejsce. Nie ma w tym nic złego, dopóki nie dojdziecie do stopki, albo nie ma tam elementu, który faktycznie powinien być na całą szerokość. Do pilnowania tego jest <code>clear: both<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>;</span></code>. Warto więc dla bezpieczeństwa dopisać to na <code>footer</code> i <code>&lt;h2&gt;</code> czy <code>&lt;h3&gt;</code> które wylądują w naszym <code>&lt;section&gt;</code>.</p>
+<h3>Ćwiczenie</h3>
+<p>Wrzućcie obok pierwszego obrazka drugi, dodajcie mu jakąś klasę i <code>clear: left</code> (jeśli ma też klasę <code>alignleft</code> bądź odwrotnie, jeśli right). </p>
+<p>Wrzućcie nagłówek pomiędzy paragrafy, tak, żeby wyrównał sobie tekst z tym <code>clear</code> i w ogóle dodajcie je tam, gdzie na stronie według Was powinny być.</p>
+
+
+			<!-- p><a href="page-2.html" class="button">Dalej</a></p -->
+		</article>
+		<aside>
+			<p>Miał być spis treści, ale jak zwykle, poniedziałek, 20:00, a Yz nieprzygotowana.</p>
+		</aside>
+	</main>
+	<footer>
+		copyright &copy; 2018
+	</footer>
+</body>
+</html>
