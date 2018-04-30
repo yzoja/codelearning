@@ -59,10 +59,10 @@
     min-width: 250px;
 }
 </code></pre>
-<p><code>min<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>width</code> to minimalny rozmiar, jaki może przyjąć element. Jest on ważniejszy niż <code>width</code> i nie pozwoli przekroczyć tej wartości. Jest na tyle uparty, że dorzuci Wam do strony scroll z poziomie.</p>
+<p><code>min<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>width</code> to minimalny rozmiar, jaki może przyjąć element. Jest on ważniejszy niż <code>width</code> i nie pozwoli przekroczyć tej wartości. Jest na tyle uparty, że dorzuci Wam do strony scroll w poziomie.</p>
 <p>Podobnie jest również <code>min<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>height</code> oraz <code>max<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>width</code> i <code>max<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>height</code> - gdzie <code>max<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>width</code> użyliśmy już przy obrazku.</p>
 <p>I bum. W zasadzie wystarczy. Ale! Jak już wiemy, przy <code>box<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>sizing: border<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>box</code> nasz <code>aside</code> wcale w środku nie ma tych 250px! Tylko mniej, bo paddingi.</p>
-<p>W tym przypadku mają one po <code>20px</code> z każdej strony, więc matematyka jest prosta - wpisujemy 290px. Co jednak zrobić, kiedy ustawicie padding na <code>rem</code> albo <code>%</code>? Wtedy z pomocą przychodzi <code>calc()</code>, którego używać możecie wszędzie, gdzie podajecie jakikolwiek rozmiar. Przykładowo: <code>min<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>width: calc(250px + 4rem)<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>;</span></code>.  Spacja wokół znaku dodawania/mnożenia/odejmowania/dzielenia jest <strong>konieczna</strong>. </p>
+<p>W tym przypadku mają one po <code>20px</code> z każdej strony, więc matematyka jest prosta - wpisujemy 290px. Co jednak zrobić, kiedy ustawicie padding na <code>rem</code> albo <code>%</code>? Wtedy z pomocą przychodzi <code>calc()</code>, którego używać możecie wszędzie, gdzie podajecie jakikolwiek rozmiar. Przykładowo: <code>min<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>width: calc(250px + 4rem)<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>;</span></code>. Spacja wokół znaku dodawania/mnożenia/odejmowania/dzielenia jest <strong>konieczna</strong>. </p>
 <p>Fajne, nie?</p>
 <blockquote><p><code>flex<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>grow</code> ustawionie na więcej niż 0 w dowolnym elemencie sprawi, że zignorowane zostanie w CSS-ie napisane przez nas <code>justify<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>content</code> i elementy rozsuną się tak, by zająć całą możliwą przestrzeń. O <code>justify<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>content</code> i jego wartościach mogliście przeczytać w <code>lekcja<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>1</code>.</p></blockquote>
 <p>&nbsp;</p>
@@ -80,7 +80,7 @@
 <p>Całą zawartość <code>aside</code> skopiujcie później do <code>index.html</code>, żeby te sekcje akurat były identyczne.</p>
 
 
-			<!-- p><a href="page-2.html" class="button">Dalej</a></p -->
+			<p><a href="page-4.html" class="button">Dalej</a></p>
 		</article>
 		<aside>
 			<p>Miał być spis treści, ale jak zwykle, poniedziałek, 20:00, a Yz nieprzygotowana.</p>

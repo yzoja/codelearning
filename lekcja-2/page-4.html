@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<title>Lekcja 2</title>
+<meta name="description" content="Spróbujmy dziś bardziej interaktywnej formy">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Lekcja 2"/>
+<meta property="og:description" content="Bardziej interaktywna wersja nauki HTML/CSS"/>
+<meta property="og:image" content="share.jpg"/>
+<link rel="shortcut icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Kurs HTML/CSS/JS pod WordPress</h1>
+		<nav>
+			<ul>
+				<li class="current"><a href="index.html">Lekcja 2</a></li>
+				<li><a href="about.html">O co chodzi?</a></li>
+				<li><a target="_blank" href="https://discordapp.com/channels/432575469645201408/">Discord</a></li>
+				<li><a target="_blank" href="https://github.com/yzoja/codelearning">Github</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article id="content">
+			<h2>Układ bootstrapowy</h2>
+<p>Dodajmy sobie nową stronę. <code>one<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>page.html</code> na przykład.</p>
+<p>Wklejcie tam kod ze strony głównej.</p>
+<p>Do <code>body</code> dodajcie <code>id=&quot;one<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>page&quot;</code>, a z <code>section</code> usuńcie id <code>content</code>. <code>&lt;aside&gt;</code> zamieńcie na <code>section</code> powiedzmy z klasą <code>white</code>. Poniżej skopiujcie górne <code>section</code> dwa razy, żebyśmy mieli dużo tekstu!</p>
+<pre><code class='language-html' lang='html'>&lt;main&gt;
+	&lt;section id=&quot;hello&quot;&gt;
+        &lt;h1&gt;
+            Wow, moja strona będzie taka piękna!
+        &lt;/h1&gt;
+        &lt;div class=&quot;content&quot;&gt;
+            &lt;p&gt;
+                parę paragrafów z tekstem, okej?
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+	&lt;section class=&quot;white&quot;&gt;(nasz ex aside)&lt;/section&gt;
+	&lt;section class=&quot;blue&quot;&gt;
+        &lt;h1&gt;Sekcja 2&lt;/h1&gt;
+        &lt;div class=&quot;content&quot;&gt;
+        	&lt;p&gt;
+            bleblebl
+        	&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+	&lt;section class=&quot;green&quot;&gt;
+        &lt;h1&gt;Sekcja 3&lt;/h1&gt;
+        &lt;div class=&quot;content&quot;&gt;
+        	&lt;p&gt;
+            bleblebl
+        	&lt;/p&gt;
+        &lt;/div&gt;    
+    &lt;/section&gt;
+&lt;/main&gt;
+</code></pre>
+<p>Pilnujcie wcięć - tu się coś w podglądzie mocno pokićkało.</p>
+<p>Z <code>main</code> wywalcie klasę <code>.row</code> - nie będzie nam potrzebna.</p>
+
+
+
+			<p><a href="page-4.html" class="button">Dalej</a></p>
+		</article>
+		<aside>
+			<p>Miał być spis treści, ale jak zwykle, poniedziałek, 20:00, a Yz nieprzygotowana.</p>
+		</aside>
+	</main>
+	<footer>
+		copyright &copy; 2018
+	</footer>
+</body>
+</html>
