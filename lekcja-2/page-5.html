@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<title>Lekcja 2</title>
+<meta name="description" content="Spróbujmy dziś bardziej interaktywnej formy">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Lekcja 2"/>
+<meta property="og:description" content="Bardziej interaktywna wersja nauki HTML/CSS"/>
+<meta property="og:image" content="share.jpg"/>
+<link rel="shortcut icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Kurs HTML/CSS/JS pod WordPress</h1>
+		<nav>
+			<ul>
+				<li class="current"><a href="index.html">Lekcja 2</a></li>
+				<li><a href="about.html">O co chodzi?</a></li>
+				<li><a target="_blank" href="https://discordapp.com/channels/432575469645201408/">Discord</a></li>
+				<li><a target="_blank" href="https://github.com/yzoja/codelearning">Github</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article id="content">
+			<h2>Przyklejone menu</h2>
+<p>Na stronie o takim układzie to prawie że klasyka. Co potrzebujemy do szczęścia?</p>
+<pre><code class='language-css' lang='css'>#one-page {
+	padding-top: 74px;
+}
+
+#one-page header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+}
+</code></pre>
+<p><code>74px</code> to aktualnie rozmiar naszego nagłówka - potrzebujemy tego, żeby wiedzieć, o ile odsunąć pozostałą część strony, tak, żeby w pozycji startowej nic nie znalazło się pod przyklejonym do góry nagłówkiem.</p>
+<p><code>position: fixed</code> przykleja właśnie element, do konkretnych koordynatów. W tym przypadku wystarczyło <code>top: 0</code>, chociaż <code>left: 0</code> nie zaszkodzi.</p>
+<p><code>width: 100%</code> jest konieczne - w innym przypadku nagłówek zająłby tylko tyle miejsca, ile by potrzebował, zamiast rozciągnąć się na całą szerokość.</p>
+<p>Taki nagłówek aż się prosi o cień, prawda? Sugerujący, że naprawdę znajduje się nad treścią.</p>
+<blockquote><p>Przy okazji warto pomyśleć, o dodaniu <code>z<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>index</code> do nagłówka, z wartością np. 10. Mówi to o osi Z i umieszczeniu elementu na warstwach, w tym przypadku najwyższej - tak, żeby nic nam tego nagłówka nie przykryło.</p>
+</blockquote>
+<h3>Jak dodać ładny cień?</h3>
+<p>Według dokumentacji Material Design, ładny cień to <code>box<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>shadow: 0 2px 4px rgba(0,0,0,0.2)<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>;</span></code>- oznacza to, że jest to cień w pionie przesunięty dwa piksele w dół, z rozmyciem na 4px, a kolorem cienia jest czarny z 20% krycia. Składnia <code>rgba()</code> to: red, green, black, alpha - czyli w pierwszych trzech podajcie wartości od 0 do 255, a w ostatniej od 0 do 1, z kropką po zerze - gdzie samo zero akurat można pominąć i napisać <code>.2</code>).</p>
+<p>Mi się aktualnie podobają cienie z negatywnymi wartościami, które zostawią nam leciuteńką przerwę przy prawej i lewej krawędzi. Np. <code>box<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>shadow: 0 6px 6px <span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>4px rgba(0,0,0,0.2)<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>;</span></code>.</p>
+<p>Pięknie, nie?</p>
+<p>&nbsp;</p>
+<h2>Praca domowa</h2>
+<p>Wejdźcie na <a href='https://fonts.google.com' target='_blank' >https://fonts.google.com</a>/ i wybierzcie sobie ładny font. Albo dwa. Sprawdźcie, żeby miały polskie znaki, najlepiej wpisując po prostu coś z polskimi literkami w oknie podglądu i wciskając &quot;Apply to all&quot;. Zapiszcie sobie wybranego fonta na kartce - będziemy z nim pracować za tydzień na następnych zajęciach.</p>
+<p>Dodatkowo.</p>
+<p>Popatrzcie na swoją stronę. Czego Wam brakuje? Dodajcie jeszcze jakiś obrazek, dajcie z prawej tekst, może w dwóch kolumnach, dacie radę? Może zróbcie to stroną o Waszej ulubionej grze/filmie/serialu czy co tam oznaczyliście ostatnio <code>id=&quot;best&quot;</code>. Wklejcie zdjęcia, cytaty, autorów/twórców i dobierzcie kolory tak, żeby pasowały tematycznie do tego, co prezentujecie.</p>
+<h1>The end</h1>
+			<p><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSewWM2QOf4RxACDT4vjK6I8kSQYDuLA7Fiej4ATEUts31rL_A/viewform?usp=sf_link" class="button">Ankieta</a></p>
+		</article>
+		<aside>
+			<p>Miał być spis treści, ale jak zwykle, poniedziałek, 20:00, a Yz nieprzygotowana.</p>
+		</aside>
+	</main>
+	<footer>
+		copyright &copy; 2018
+	</footer>
+</body>
+</html>

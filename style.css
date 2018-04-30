@@ -116,3 +116,25 @@ One Page Layout
     text-align: center;
     margin-bottom: 1em;
 }
+
+#hello .content {
+    column-count: 3;
+    column-gap: 2rem;
+    max-width: unset;
+}
+
+section .content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+#one-page {
+	padding-top: 74px;
+}
+
+#one-page header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	box-shadow: 0 6px 6px -4px rgba(0,0,0,0.2);
+}
