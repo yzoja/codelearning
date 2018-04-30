@@ -114,3 +114,11 @@ footer {
 	font-size: 12px;
 	margin-top: 2rem;
 }
+
+blockquote {
+	border: 1px solid #ddd;
+	background: #f4f4f4;
+	color: #555;
+	font-size: 0.9em;
+	padding: 10px;
+}
