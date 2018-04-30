@@ -79,6 +79,35 @@ One Page Layout
 <p>Wyzerujcie też <code>padding</code>, okej? (<code>padding: 0</code>)</p>
 <h3>Ćwiczenie</h3>
 <p>Do klas o odpowiednich nazwach (<code>.white</code>, <code>.blue</code>) dodajcie sobie tła o odpowiednich kolorach i dopasujcie kolor fontów.</p>
+<p>&nbsp;</p>
+<p>Jeśli macie już dodane kolory tła i pstrokato bo pstrokato, ale zaczyna to wyglądać, to czas zająć się faktycznym wyglądem.</p>
+<p>Po pierwsze: odstępy w sekcjach. Tła chcemy, żeby się stykały, więc dodajemy paddingi.</p>
+<pre><code class='language-css' lang='css'>#one-page main section {
+    padding: 5rem 5%;
+}
+</code></pre>
+<p>Doda nam to spore odstępy, ale właśnie do takich przyzwyczaiły nas te układy, prawda?</p>
+<p>Nagłówki na środek, koniecznie, nie?</p>
+<pre><code class='language-css' lang='css'>#one-page section h1 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+</code></pre>
+<p>W głównej sekcji damy sobie tekst w trzech kolumnach, okej?</p>
+<pre><code class='language-css' lang='css'>#hello .content {
+    column-count: 3;
+    column-gap: 2rem;
+    max-width: unset;
+}
+</code></pre>
+<p>Czary! Bez flexa, bez floatów.</p>
+<p>A reszta tekstów? Niech będzie tak jak jest, w jednej, ale nie aż taka szeroka, prawda?</p>
+<pre><code class='language-css' lang='css'>section .content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+</code></pre>
+<p>I teraz nasza strona ma już ręce i nogi.</p>
 
 
 

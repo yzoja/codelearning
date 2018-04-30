@@ -90,3 +90,29 @@ One Page Layout
 	display: block;
 	padding: 0;
 }
+
+#hello {
+	background: #bc2760;
+}
+
+.white {
+	background: #fff;
+	color: #333;
+}
+
+.green {
+	background: #365127;
+}
+
+.blue {
+	background: #5d8aea;
+}
+
+#one-page main section {
+	padding: 5rem 5%;
+}
+
+#one-page section h1 {
+    text-align: center;
+    margin-bottom: 1em;
+}
