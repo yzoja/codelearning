@@ -50,6 +50,11 @@ main {
 	min-height: calc(100vh - 71px - 61px - 4rem);
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 #content {
 	width: 70%;
 	margin-right: 2rem;
@@ -61,6 +66,12 @@ main {
 
 #content p {
 	line-height: 170%;
+}
+
+pre {
+	background: #eee;
+	line-height: 25px;
+	padding: 10px;
 }
 
 .button {
@@ -84,6 +95,7 @@ main {
 }
 
 aside {
+	width: 250px;
 	padding-left: 2rem;
 	border-left: 1px solid #ddd;
 }

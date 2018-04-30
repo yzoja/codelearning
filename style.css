@@ -46,11 +46,29 @@ header li {
 }
 
 main {
-	padding: 2rem 0;
+	padding: 2rem 5%;
+	display: flex;
+}
+
+#content {
+	background: #fff;
+	color: #222;
+}
+
+aside {
+	background: #915796;
+}
+
+aside, #content {
+	padding: 2rem;
 }
 
 p {
 	margin-top: 1em;
+}
+
+p:first-child {
+	margin-top: 0;
 }
 
 /* footer */

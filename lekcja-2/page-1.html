@@ -27,15 +27,49 @@
 	</header>
 	<main>
 		<article id="content">
-			<h2>Lekcja 2</h2>
-			<p></p>
-			<p><a href="page-2.html" class="button">Dalej</a></p>
+			<h2>Układanie elementów obok siebie</h2>
+			<p>Brzmi może trywialnie, ale 80% CSS-a polega właśnie na tym, a żeby nie utrudniać sobie pracy, warto zadbać, by i nasz kod HTML był sensownie napisany, czyli żeby już struktura sugerowała, że robimy kolumny.</p>
+			<p>Otwórzcie sobie plik <code>index.html</code> - tam dzisiaj zaczniemy.</p>
+			<p>W środku <code>main</code> zróbcie sobie <code>&lt;section&gt;</code> z ID <code>content</code>. Opakujcie tym całą zawartość, czyli nagłówek i paragrafy z tekstem. Pamiętajcie o wcięciach. Po tagu zamykającym <code>&lt;/section&gt;</code> dodajcie <code>&lt;aside&gt;</code>. Klasę lub ID możecie dodać jeśli chcecie.</p>
+			<blockquote><p>** Dlaczego tak?** Żeby stronę i jej kod się lepiej czytało. Dobrze jest grupować elementy, dlatego też posty dobrze wrzucać w <code>&lt;article&gt;</code> a jeśli chcecie wyświetlić więcej niż jeden link, robicie logiczne menu. Dlatego też, prawą kolumnę będziemy mieć teraz w <code>section</code>, a lewą w <code>aside</code>.</p>
+			</blockquote>
+			<p><code>aside</code> wypełnijcie sobie tekstem. Wpiszcie <em>lorem ipsum</em>, albo ten paragraf, który macie na stronie &quot;O mnie&quot;. Możecie, ale nie musicie opakowywać tego w HTML.</p>
+			<p>Jeśli zapiszecie i odświeżycie stronę, zobaczycie, że... nic się nie stało. Tekst z <code>aside</code> pojawił się poniżej naszych paragrafów. Czas więc na CSS.</p>
+			<p>Odnajdźcie na liście reguły odnoszące się do <code>main</code>. Macie? Pamiętacie, jak ustawialiśmy elementy w nagłówku? Teraz zrobimy to samo.</p>
+			<pre><code class='language-css' lang='css'>main {
+    display: flex;
+    ...
+}</code></pre>
+			<blockquote><p>Trzy kropki oznaczają, że nie usuwacie tego, co już macie, tylko dopisujecie aktualny CSS.</p>
+			</blockquote>
+			<p>Po odświeżeniu strony zobaczycie, że mamy już dwie kolumny!</p>
+			<p>Wszyscy dobrze wiemy, że jednak lepiej czyta się ciemny tekst na białym tle, więc tak też ustawmy dla naszego <code>#content</code>.</p>
+			<pre><code class='language-css' lang='css'>#content {
+    background: #fff;
+    color: #222;
+}</code></pre>
+			<p>Lepiej, nie? Ale nadal paskudnie - trzeba ten tekst trochę odsunąć. I odsunąć trochę tę drugą kolumnę. W tym celu sięgniemy do<code>padding</code> i <code>margin</code> i tego przypominajkowego obrazka: </p>
+			<p><img src='https://raw.githubusercontent.com/yzoja/codelearning/master/sizing.png' alt='img' /></p>
+			<p>Jeśli pomyśleliście o tym, że do <code>section</code> trzeba dodać padding, a między <code>section</code> a <code>aside</code> margines, to znaczy, że jesteśmy wszyscy na dobrej drodze. Tylko, <code>aside</code> bez paddingów chyba wyglądałby łyso, nie? Tekst zaczynałby się w różnych miejscach - to niezbyt ładne. Dodamy padding do obu, okej?</p>
+			<p>Wiecie, że można CSS nakładać do dwóch elementów na raz i nie trzeba im dawać tej samej klasy?</p>
+			<pre><code class='language-css' lang='css'>#content, aside {
+    padding: 2rem;
+}</code></pre>
+			<p><code>1rem</code> to zazwyczaj <code>16px</code> na desktopie. To całkiem wdzięczna jednostka, która tak jak piksele, nie jest &quot;zmienna&quot; jak procenty czy <code>em</code>. </p>
+			<p>Selektorów w deklaracji tego typu może być ile tylko chcecie, każdy oddzielacie przecinkami i nie dajecie przecinka na końcu, jak w normalnym zdaniu.</p>
+			<p>Odświeżcie. Wow! ładnie, nie? Może ten margines sobie podarować, jak myślicie? Nieważne. Jeśli wsadziliście w <code>aside</code> paragraf z tekstem, zamknięty w <code>p</code> to może Wam się coś niepodobać i słusznie.</p>
+			<p>Wrzuciliśmy naszym paragrafom margines od góry, prawda? A nie chcemy go w przypadku, gdy dany paragraf jest pierwszym elementem. Jak się go pozbyć, a no właśnie w ten sposób:</p>
+			<pre><code class='language-css' lang='css'>p:first-child {
+    margin-top: 0;
+}</code></pre>
+			<p><code>:first<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>child</code> to jedna z pseudoklas, których używa się w CSS-ie. Przed nami jeszcze sporo, więc dzisiaj nie zagłębię się w nie tak bardzo.</p>
+			<h3>Ćwiczenie</h3>
+			<p>Do bocznego panelu dodajcie sobie tło w waszym ulubionym kolorze i dobierzcie kolor tekstu tak, żeby było to choć trochę czytelne.</p>
+
+			<!-- p><a href="page-2.html" class="button">Dalej</a></p -->
 		</article>
 		<aside>
-			<ul>
-				<li>Lekcja 2</li>
-				<li>O CSS raz jeszcze</li>
-			</ul>
+			<p>Miał być spis treści, ale jak zwykle, poniedziałek, 20:00, a Yz nieprzygotowana.</p>
 		</aside>
 	</main>
 	<footer>
