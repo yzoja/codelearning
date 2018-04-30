@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<title>Lekcja 2</title>
+<meta name="description" content="Spróbujmy dziś bardziej interaktywnej formy">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Lekcja 2"/>
+<meta property="og:description" content="Bardziej interaktywna wersja nauki HTML/CSS"/>
+<meta property="og:image" content="share.jpg"/>
+<link rel="shortcut icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Kurs HTML/CSS/JS pod WordPress</h1>
+		<nav>
+			<ul>
+				<li class="current"><a href="index.html">Lekcja 2</a></li>
+				<li><a href="about.html">O co chodzi?</a></li>
+				<li><a target="_blank" href="https://discordapp.com/channels/432575469645201408/">Discord</a></li>
+				<li><a target="_blank" href="https://github.com/yzoja/codelearning">Github</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<article id="content">
+			<p><code>clear:left</code> jak już może się sami przekonaliście, wyrówna nam tylko elementy z <code>float: left</code>, ale nie zrówna całej pozostałej przestrzeni, więc jeśli ustawicie dwa elementy z <code>float: left<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>;</span></code> i odpowiednim <code>clear</code> to paragraf oblewający będzie oblewał oba elementy. W przypadku <code>clear: both</code> ten tekst pojawiłyby się dopiero na poziomie drugiego elementu.</p>
+<h2>Ej, a co z szerokościami?</h2>
+<p>No właśnie. Jeśli teraz każdy wrzuci screena ze swojej strony głównej, to zobaczymy ładnie, że u każdego szerokości poszczególnych boksów są różne. <strong>Dlaczego?</strong> Bo aktualnie dostosowały się one do ilości wrzuconego tam przez Was tekstu. Więc?</p>
+<pre><code class='language-css' lang='css'>#content {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 70%
+}
+</code></pre>
+<p>Proporcje 70/30 będą dobre? Jeśli nie, zmieńcie sobie <code>flex<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>basis</code> na jakąś ładniejszą dla Was liczbę.</p>
+<p><code>flex<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>grow</code> oznacza, jak bardzo element może sobie urosnać. <code>0</code> mówi, że nie może wcale, każda wartość dodatnia mówi, że może rosnąć na tyle, ile ma miejsca, ale elementy z wyższą wartością tutaj, będą miały pierwszeństwo do zagospodarowania większej przestrzeni.</p>
+<p><code>flex<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>shrink</code> podobnie, ale w drugą stronę - oznacza, na ile nasz element może się zmniejszyć.</p>
+<p><code>flex<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>basis</code> to bazowy rozmiar elementu, może być podany w dowolnej jednostce, jednak w naszym przypadku piksele mają sporo sensu.</p>
+<p>Skrótowy zapis brzmiałby <code>flex: 1 0 70%<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>;</span></code>. </p>
+<p>&nbsp;</p>
+<pre><code class='language-css {' lang='css {'>aside {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 30%;
+}
+</code></pre>
+<p>Przypuścmy, że dodalibyśmy między tymi elementami margines, wtedy <code>shrink</code> na <code>aside</code> się bardzo przyda, bo nie będzie już 100% do rozdysponowania, tylko 100% - wartość marginesu.</p>
+<blockquote><p>Domyślnie <code>display: flex</code> nie pozwala elementom się łamać. Jeśli więc dodacie tam cztery elementy i każdy będzie miał <code>flex<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>basis</code> ustawione na 100% to i tak wyświetlą się wszystkie w jednym rzędzie, z bardzo różnym skutkiem.</p>
+</blockquote>
+<p>Już w ten sposób nasza strona będzie się skalować i kolumny z tekstem też.</p>
+<p>Jeśli do <code>main</code>, czyli tam gdzie macie <code>display: flex<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>;</span></code> dopiszecie <code>flex<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>wrap: wrap</code> wtedy pozwolimy elementom spadać do drugiej kolumny. Trzeba już się zacząć pilnować z szerokością elementów.</p>
+<p>Przyjmijmy, że w sidebarze na Waszej stronie jest wklejka do Facebooka i potrzebuje ona minimum 250px szerokości. Co więc zrobić, żeby sidebar przesunął się na dół, gdy nie będzie miał 250px?</p>
+<pre><code class='language-css' lang='css'>aside {
+    ...
+    min-width: 250px;
+}
+</code></pre>
+<p><code>min<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>width</code> to minimalny rozmiar, jaki może przyjąć element. Jest on ważniejszy niż <code>width</code> i nie pozwoli przekroczyć tej wartości. Jest na tyle uparty, że dorzuci Wam do strony scroll z poziomie.</p>
+<p>Podobnie jest również <code>min<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>height</code> oraz <code>max<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>width</code> i <code>max<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>height</code> - gdzie <code>max<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>width</code> użyliśmy już przy obrazku.</p>
+<p>I bum. W zasadzie wystarczy. Ale! Jak już wiemy, przy <code>box<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>sizing: border<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>box</code> nasz <code>aside</code> wcale w środku nie ma tych 250px! Tylko mniej, bo paddingi.</p>
+<p>W tym przypadku mają one po <code>20px</code> z każdej strony, więc matematyka jest prosta - wpisujemy 290px. Co jednak zrobić, kiedy ustawicie padding na <code>rem</code> albo <code>%</code>? Wtedy z pomocą przychodzi <code>calc()</code>, którego używać możecie wszędzie, gdzie podajecie jakikolwiek rozmiar. Przykładowo: <code>min<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>-</span>width: calc(250px + 4rem)<span style='font-family:"Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif'>;</span></code>.  Spacja wokół znaku dodawania/mnożenia/odejmowania/dzielenia jest <strong>konieczna</strong>. </p>
+<p>Fajne, nie?</p>
+<p>&nbsp;</p>
+<h3>Co z .aligncenter?</h3>
+<p><code>.aligncenter</code> to najprostszy z przypadków.</p>
+<pre><code class='language-css' lang='css'>.aligncenter {
+    display: block;
+    margin: 1em auto;
+}
+</code></pre>
+<p>Wiecie za co odpowiada każda z tych linijek?</p>
+<p>&nbsp;</p>
+<h2>Ćwiczenie</h2>
+<p>Otwórzcie teraz <code>about.html</code>. Spróbujcie odtworzyć strukturę HTML-a, jaką macie na stronie głównej - dodajcie <code>&lt;section id=&quot;content&quot;&gt;</code>, dodajcie <code>&lt;aside&gt;</code>. W niego na górę wstawcie obrazek, z klasą <code>aligncenter</code>, a poniżej tę listę, którą mieliście zrobić w ramach zadania domowego.</p>
+<p>Całą zawartość <code>aside</code> skopiujcie później do <code>index.html</code>, żeby te sekcje akurat były identyczne.</p>
+
+
+			<!-- p><a href="page-2.html" class="button">Dalej</a></p -->
+		</article>
+		<aside>
+			<p>Miał być spis treści, ale jak zwykle, poniedziałek, 20:00, a Yz nieprzygotowana.</p>
+		</aside>
+	</main>
+	<footer>
+		copyright &copy; 2018
+	</footer>
+</body>
+</html>
